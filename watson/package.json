@@ -1,0 +1,14 @@
+{
+  "name": "watson",
+  "version": "1.0.0",
+  "description": "trying out IBM watson",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "kengz",
+  "license": "MIT",
+  "dependencies": {
+    "watson-developer-cloud": "^1.2.5"
+  }
+}

@@ -6,6 +6,15 @@ bin-release/
 # Other files and folders
 .settings/
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Node
+npm-debug.log
+node_modules/
+
+# Python
+pyenv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# System files
+.DS_Store
