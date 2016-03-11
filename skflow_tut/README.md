@@ -5,9 +5,14 @@
 ```shell
 sudo apt-get install build-essential python3-dev python3-setuptools python3-numpy python3-scipy python3-pip libatlas-dev libatlas3gf-base
 pip3 install scikit-learn
-pip3 install skflow
-pip3 install pandas matplotlib
+pip3 install git+git://github.com/tensorflow/skflow.git
+pip3 install pandas
+pip3 install matplotlib
+sudo apt-get install python-matplotlib
 ```
+
+##### Data download trick: 
+`wget https://googledrive.com/host/0Bz8a_Dbh9Qhbfll6bVpmNUtUcFdjYmF2SEpmZUZUcVNiMUw1TWN6RDV3a0JHT3kxLVhVR2M/ag_news_csv.tar.gz`
 
 skflow tutorial 1 on [here](https://medium.com/@ilblackdragon/tensorflow-tutorial-part-1-c559c63c0cb1#.feohjl3hx)
 
@@ -18,19 +23,21 @@ Use the DNN to train sentence to intent, use embedding, word2vec, and the catego
 
 bug fix: http://stackoverflow.com/questions/35789666/tensorflow-with-skflow-attributeerror-module-object-has-no-attribute-saver
 
-## Steps:
+## Progression:
 
-finish skflow tutorials
-https://drive.google.com/folderview?id=0Bz8a_Dbh9Qhbfll6bVpmNUtUcFdjYmF2SEpmZUZUcVNiMUw1TWN6RDV3a0JHT3kxLVhVR2M#grid
+##### Today:
 
-embeddings, word2vec, https://github.com/tensorflow/skflow/issues/68
-read skflow api doc
-TF tasks: understand loss number, play with shape, init tensor, reshape, conv2d
-nlp data categorization
-hyperparameter selection
+- finish skflow tutorials
+- read skflow api doc
+- update mac/ubuntu setup scripts
 
-skflow nlp, distributed rep
-tensorflow serving https://tensorflow.github.io/serving/serving_basic
 
-learn scikit http://scikit-learn.org/stable/
-learn pandas http://pandas.pydata.org/pandas-docs/stable/10min.html
+##### Next:
+- embeddings, word2vec, distr rep https://github.com/tensorflow/skflow/issues/68
+- nlp data categorization
+- TF tasks: understand loss number, play with shape, init tensor, reshape, conv2d
+- hyperparameter selection
+- tensorflow serving https://tensorflow.github.io/serving/serving_basic
+
+- learn scikit http://scikit-learn.org/stable/
+- learn pandas http://pandas.pydata.org/pandas-docs/stable/10min.html
