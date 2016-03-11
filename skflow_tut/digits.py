@@ -1,26 +1,31 @@
-import random
-from sklearn import datasets
-from sklearn.metrics import accuracy_score
-from sklearn.cross_validation import train_test_split
-
+from sklearn import datasets, cross_validation, metrics
 import tensorflow as tf
 
 import skflow
+# from skflow import monitors
 
-random.seed(42)
 
 digits = datasets.load_digits()
 X = digits.images
 y = digits.target
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.2, random_state=42)
 
+# Split X_train again to create validation data
+# X_train, X_val, y_train, y_val = cross_validation.train_test_split(X_train, y_train, test_size=0.2, random_state=42)
+
+# TensorFlow model using Scikit Flow ops
 def conv_model(X, y):
   X = tf.expand_dims(X, 3)
+  # convolution with max pooling
   features = tf.reduce_max(skflow.ops.conv2d(X, 12, [3,3]), [1,2])
-  features = tf.reshape(features, [-1, 12])
+  features = tf.reshape(features, [-1,12])
   return skflow.models.logistic_regression(features, y)
 
+# val_monitor = monitors.ValidationMonitor(X_val, y_val, n_classes=10, print_steps=50)
+
 classifier = skflow.TensorFlowEstimator(model_fn=conv_model, n_classes=10, steps=500, learning_rate=0.05, batch_size=128)
+# classifier.fit(X_train, y_train, val_monitor)
 classifier.fit(X_train, y_train)
-print(accuracy_score(classifier.predict(X_test), y_test))
+score = metrics.accuracy_score(y_test, classifier.predict(X_test))
+print('Test Accuracy: {0:f}'.format(score))
