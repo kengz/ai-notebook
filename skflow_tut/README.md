@@ -5,7 +5,8 @@
 ```shell
 sudo apt-get install build-essential python3-dev python3-setuptools python3-numpy python3-scipy python3-pip libatlas-dev libatlas3gf-base
 pip3 install scikit-learn
-pip3 install skflow pandas matplotlib
+pip3 install skflow
+pip3 install pandas matplotlib
 ```
 
 skflow tutorial 1 on [here](https://medium.com/@ilblackdragon/tensorflow-tutorial-part-1-c559c63c0cb1#.feohjl3hx)
