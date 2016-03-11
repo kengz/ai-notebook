@@ -3,9 +3,9 @@
 ## Installation
 
 ```shell
-sudo apt-get install build-essential python3-dev python3-setuptools python3-numpy python3-scipy python3-pip libatlas-dev libatlas3gf-base
+sudo apt-get -y install build-essential python3-dev python3-setuptools python3-numpy python3-scipy python3-pip libatlas-dev libatlas3gf-base
 pip3 install scikit-learn
-pip3 install git+git://github.com/tensorflow/skflow.git
+sudo pip3 install git+git://github.com/tensorflow/skflow.git
 pip3 install pandas
 pip3 install matplotlib
 sudo apt-get install python-matplotlib
@@ -20,8 +20,6 @@ skflow tutorial 1 on [here](https://medium.com/@ilblackdragon/tensorflow-tutoria
 
 
 Use the DNN to train sentence to intent, use embedding, word2vec, and the categorizer for intents
-
-bug fix: http://stackoverflow.com/questions/35789666/tensorflow-with-skflow-attributeerror-module-object-has-no-attribute-saver
 
 ## Progression:
 

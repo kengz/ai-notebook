@@ -43,4 +43,4 @@ classifier = skflow.TensorFlowEstimator(model_fn=one_hot_categorical_model, n_cl
 classifier.fit(X_train, y_train)
 
 print(metrics.accuracy_score(classifier.predict(X_test), y_test))
-print(metrics.roc_auc_score(classifier.predict(X_test), y_test))
+# print(metrics.roc_auc_score(classifier.predict(X_test), y_test))

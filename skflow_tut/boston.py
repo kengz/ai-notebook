@@ -13,7 +13,7 @@ scaler = preprocessing.StandardScaler()
 X_train = scaler.fit_transform(X_train)
 
 # 2-layer fully conn DNN Regressor, 10, 10 units resp
-regressor = skflow.TensorFlowDNNRegressor(hidden_units=[10, 10], steps=5000, learning_rate=0.1, batch_size=1)
+regressor = skflow.TensorFlowDNNRegressor(hidden_units=[10, 20, 10], steps=5000, learning_rate=0.01, batch_size=1)
 
 regressor.fit(X_train, y_train)
 

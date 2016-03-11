@@ -28,12 +28,12 @@ print(accuracy_score(lr.predict(X_test), y_test))
 
 # 3 layer neural network with rectified linear activation.
 
-# random.seed(42)
-# classifier = skflow.TensorFlowDNNClassifier(hidden_units=[10, 20, 10],
-#     n_classes=2, batch_size=128, steps=5000, learning_rate=0.02)
-# classifier.fit(X_train, y_train, logdir='./models/titanic_dnn_1/')
-# classifier.save('./models/titanic_dnn_1')
-# print(accuracy_score(classifier.predict(X_test), y_test))
+random.seed(42)
+classifier = skflow.TensorFlowDNNClassifier(hidden_units=[10, 20, 10],
+    n_classes=2, batch_size=128, steps=5000, learning_rate=0.01)
+classifier.fit(X_train, y_train, logdir='./models/titanic_dnn_1/')
+classifier.save('./models/titanic_dnn_1')
+print(accuracy_score(classifier.predict(X_test), y_test))
 new_classifier = skflow.TensorFlowEstimator.restore('./models/titanic_dnn_1')
 print(accuracy_score(new_classifier.predict(X_test), y_test))
 
