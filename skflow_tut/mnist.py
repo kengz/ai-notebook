@@ -26,7 +26,7 @@ def conv_model(X,y):
   X =tf.reshape(X, [-1, 28,28,1])
   # for conv layer will compute 32 features for each 5x5 patch
   with tf.variable_scope('conv_layer1'):
-    h_conv1 = skflow.ops.conv2d(X, n_filters=32, filter_shape=[5,5], bias=True, activation=tf.nn.rely)
+    h_conv1 = skflow.ops.conv2d(X, n_filters=32, filter_shape=[5,5], bias=True, activation=tf.nn.relu)
     h_pool1 = max_pool_2x2(h_conv1)
 
   # second convs layer will compute 64 features for each 5x5 patch
@@ -37,7 +37,7 @@ def conv_model(X,y):
     h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
 
   # densely conn layer with 1024 neurons
-  h_fc1 = skflow.ops.dnn(h_pool2_flat, [1024], activation=tf.nn.rely, keep_prob=0.5)
+  h_fc1 = skflow.ops.dnn(h_pool2_flat, [1024], activation=tf.nn.relu, keep_prob=0.5)
   return skflow.models.logistic_regression(h_fc1, y)
 
 # Training, predicing
