@@ -2,7 +2,7 @@ from sklearn import datasets, cross_validation, metrics
 import skflow
 
 iris = datasets.load_iris()
-X_train, X_test, y_train, y_test = cross_validation.train_test_split(iris.data, iris.target, train_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = cross_validation.train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)
 
 def my_model(X, y):
   """This is DNN with 10, 20, 10 hidden layers, and dropout of 0.9 probability."""

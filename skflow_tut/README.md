@@ -27,10 +27,14 @@ Use the DNN to train sentence to intent, use embedding, word2vec, and the catego
 
 ##### Today:
 
+- deploy tensorflow in use case
 - finish skflow tutorials
 - read skflow api doc
 - see seq2seq
+https://www.tensorflow.org/versions/r0.7/tutorials/image_recognition/index.html
 
+deployment: http://stackoverflow.com/questions/33711556/making-predictions-with-a-tensorflow-model
+https://github.com/tensorflow/tensorflow/issues/97
 
 ##### Next:
 - embeddings, word2vec, distr rep https://github.com/tensorflow/skflow/issues/68

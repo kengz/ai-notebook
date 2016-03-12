@@ -3,7 +3,7 @@ from sklearn import datasets, cross_validation, metrics
 import skflow
 
 iris = datasets.load_iris()
-X_train, X_test, y_train, y_test = cross_validation.train_test_split(iris.data, iris.target, train_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = cross_validation.train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)
 
 # You can define you configurations by providing a ConfigAddon object to
 # estimator to control session configurations, e.g. num_cores and gpu_memory_fraction
