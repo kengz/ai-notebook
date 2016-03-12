@@ -4,6 +4,7 @@ bin-debug/
 bin-release/
 models/
 data/
+MNIST_data/
 
 # Other files and folders
 .settings/

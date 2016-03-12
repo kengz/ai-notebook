@@ -11,6 +11,8 @@ pip3 install matplotlib
 sudo apt-get install python-matplotlib
 ```
 
+debug install, try to install protobuf 3 beta: `sudo pip3 install protobuf==3.0.0b2`
+
 ##### Data download trick: 
 `wget https://googledrive.com/host/0Bz8a_Dbh9Qhbfll6bVpmNUtUcFdjYmF2SEpmZUZUcVNiMUw1TWN6RDV3a0JHT3kxLVhVR2M/ag_news_csv.tar.gz`
 
@@ -27,7 +29,7 @@ Use the DNN to train sentence to intent, use embedding, word2vec, and the catego
 
 - finish skflow tutorials
 - read skflow api doc
-- update mac/ubuntu setup scripts
+- see seq2seq
 
 
 ##### Next:
