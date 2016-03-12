@@ -1,3 +1,4 @@
+import shutil
 from sklearn import metrics
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
@@ -43,5 +44,17 @@ def conv_model(X,y):
 # Training, predicing
 classifier = skflow.TensorFlowEstimator(model_fn=conv_model, n_classes=10, batch_size=100, steps=20000, learning_rate=0.001)
 classifier.fit(mnist.train.images, mnist.train.labels)
+
+# Save the model
+
+# Clean checkpoint folder if exists
+try:
+    shutil.rmtree('./models/mnist_convnet')
+except OSError:
+    pass
+
+# Save model, parameters and learned variables.
+classifier.save('./models/mnist_convnet')
+
 score = metrics.accuracy_score(classifier.predict(mnist.test.images), mnist.test.labels)
 print('Accuracy: {0:f}'.format(score))
