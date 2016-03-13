@@ -1,5 +1,28 @@
 # skflow
 
+## Care while building:
+
+- StandardScaler, fit_transform, Pipeline
+- categorization of data
+- one-hot matrix for feature space expansion
+- hyperparameter fine tuning, best done parallelized and automatically
+- model save and load
+
+#### Hyperparameter opt
+- [scikit](http://scikit-learn.org/stable/modules/classes.html#module-sklearn.grid_search). builtin with scikit rmb. algo: grid search, random search. [e.g. here](http://machinelearningmastery.com/how-to-tune-algorithm-parameters-with-scikit-learn/). skflow eg here: https://github.com/tensorflow/skflow/blob/master/skflow/tests/test_grid_search.py, also here http://scikit-learn.org/stable/modules/grid_search.html#exhaustive-grid-search and here http://scikit-learn.org/stable/modules/generated/sklearn.grid_search.GridSearchCV.html#sklearn.grid_search.GridSearchCV
+- [hyperopt](https://github.com/hyperopt/hyperopt). algo: rand search, TPE
+- [optunity](http://optunity.readthedocs.org/en/latest/_modules/optunity/api.html#minimize). algo: search tree
+
+Useful scikit examples: http://hyperopt.github.io/hyperopt-sklearn/
+
+hyperopt-sklearn algo: Just use hyperopt pls
+Random Search
+Tree of Parzen Estimators (TPE)
+Annealing
+Tree
+Gaussian Process Tree
+
+
 ## Installation
 
 ```shell
@@ -27,14 +50,15 @@ Use the DNN to train sentence to intent, use embedding, word2vec, and the catego
 
 ##### Today:
 
-- deploy tensorflow in use case
 - finish skflow tutorials
-- read skflow api doc
 - see seq2seq
 https://www.tensorflow.org/versions/r0.7/tutorials/image_recognition/index.html
 
-deployment: http://stackoverflow.com/questions/33711556/making-predictions-with-a-tensorflow-model
-https://github.com/tensorflow/tensorflow/issues/97
+scikit load csv:
+```
+import numpy as np
+data = np.loadtxt('XXX.csv', delimiter=',')
+```
 
 ##### Next:
 - embeddings, word2vec, distr rep https://github.com/tensorflow/skflow/issues/68
