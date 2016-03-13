@@ -7,20 +7,8 @@
 - one-hot matrix for feature space expansion
 - hyperparameter fine tuning, best done parallelized and automatically
 - model save and load
+- for small dataset, do kfold cross validation: http://scikit-learn.org/stable/tutorial/statistical_inference/model_selection.html#cross-validation-generators
 
-#### Hyperparameter opt
-- [scikit](http://scikit-learn.org/stable/modules/classes.html#module-sklearn.grid_search). builtin with scikit rmb. algo: grid search, random search. [e.g. here](http://machinelearningmastery.com/how-to-tune-algorithm-parameters-with-scikit-learn/). skflow eg here: https://github.com/tensorflow/skflow/blob/master/skflow/tests/test_grid_search.py, also here http://scikit-learn.org/stable/modules/grid_search.html#exhaustive-grid-search and here http://scikit-learn.org/stable/modules/generated/sklearn.grid_search.GridSearchCV.html#sklearn.grid_search.GridSearchCV
-- [hyperopt](https://github.com/hyperopt/hyperopt). algo: rand search, TPE
-- [optunity](http://optunity.readthedocs.org/en/latest/_modules/optunity/api.html#minimize). algo: search tree
-
-Useful scikit examples: http://hyperopt.github.io/hyperopt-sklearn/
-
-hyperopt-sklearn algo: Just use hyperopt pls
-Random Search
-Tree of Parzen Estimators (TPE)
-Annealing
-Tree
-Gaussian Process Tree
 
 
 ## Installation
