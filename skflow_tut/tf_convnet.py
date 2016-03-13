@@ -247,7 +247,6 @@ def main(argv=None):  # pylint: disable=unused-argument
           feed_dict=feed_dict)
       # save the session into model
       save_path = saver.save(sess, os.getcwd()+'/model.ckpt')
-      sess = None
       # restore
       saver.restore(sess, os.getcwd()+'/model.ckpt')
 
