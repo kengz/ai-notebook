@@ -10,6 +10,9 @@
 - for small dataset, do kfold cross validation: http://scikit-learn.org/stable/tutorial/statistical_inference/model_selection.html#cross-validation-generators
 
 
+## NLP with deep conv net
+
+- see le paper: conv neural net for sentence classification
 
 ## Installation
 
@@ -38,7 +41,13 @@ Use the DNN to train sentence to intent, use embedding, word2vec, and the catego
 
 ##### Today:
 
+- gensim eg: https://radimrehurek.com/gensim/models/word2vec.html#gensim.models.word2vec.Word2Vec, https://radimrehurek.com/gensim/models/doc2vec.html, http://textminingonline.com/training-word2vec-model-on-english-wikipedia-by-gensim, https://gist.github.com/balajikvijayan/9f7ab00f9bfd0bf56b14
+- broken gensim tut: http://rare-technologies.com/word2vec-tutorial/
 - finish skflow tutorials
+- more hyperopt
+- word2vec: https://github.com/piskvorky/gensim, https://github.com/danielfrg/word2vec, https://linanqiu.github.io/2015/10/07/word2vec-sentiment/, http://nbviewer.jupyter.org/github/danielfrg/word2vec/blob/master/examples/doc2vec.ipynb
+- ok word2vec: . Go with gensim first, since it's more powerful. Otherwise fallback to the apache word2vec, 
+- datejs tut
 - see seq2seq
 https://www.tensorflow.org/versions/r0.7/tutorials/image_recognition/index.html
 
@@ -52,8 +61,6 @@ data = np.loadtxt('XXX.csv', delimiter=',')
 - embeddings, word2vec, distr rep https://github.com/tensorflow/skflow/issues/68
 - nlp data categorization
 - TF tasks: understand loss number, play with shape, init tensor, reshape, conv2d
-- hyperparameter selection
-- tensorflow serving https://tensorflow.github.io/serving/serving_basic
 
 - learn scikit http://scikit-learn.org/stable/
 - learn pandas http://pandas.pydata.org/pandas-docs/stable/10min.html
