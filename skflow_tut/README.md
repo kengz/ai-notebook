@@ -41,6 +41,12 @@ Use the DNN to train sentence to intent, use embedding, word2vec, and the catego
 
 ##### Today:
 
+- saving model in tf: https://github.com/tensorflow/tensorflow/issues/616
+- tf rnn tut: https://www.tensorflow.org/versions/r0.7/tutorials/recurrent/index.html
+- do skflow rnn tut
+- https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/ops/seq2seq.py
+- ooh watttt: http://keras.io/examples/ ohh but no seq2seq. bummer
+
 - gensim eg: https://radimrehurek.com/gensim/models/word2vec.html#gensim.models.word2vec.Word2Vec, https://radimrehurek.com/gensim/models/doc2vec.html, http://textminingonline.com/training-word2vec-model-on-english-wikipedia-by-gensim, https://gist.github.com/balajikvijayan/9f7ab00f9bfd0bf56b14
 - broken gensim tut: http://rare-technologies.com/word2vec-tutorial/
 - finish skflow tutorials
